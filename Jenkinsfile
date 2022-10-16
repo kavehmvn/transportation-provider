@@ -17,8 +17,18 @@ pipeline {
             }
 
             post{
-                always{
+                always {
                     junit '**/target/surefire-reports/TEST-*.xml'
+                }
+            }
+        }
+        stage('Publish') {
+            steps {
+                    sh 'mvn package'
+            }
+            post {
+                success{
+                    archiveArtifacts 'target/*.jar'
                 }
             }
         }
