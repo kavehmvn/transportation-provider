@@ -1,4 +1,4 @@
-# A Provider to simulate transporters for goods
+# A Provider to simulate transporters for goods. The project will be built and packaged via a Jenkins CI/CD pipeline
 
 It provides APIs to create transporter containers with maximum allowable gross load and load goods into them.
 
@@ -13,3 +13,5 @@ Data Export/import APIs are provided to import containers with goods as CSV file
 
 Run the backend side in any Java IDE, and the APIs will be available on port 8081.
 Swagger documentation of the APIs will also be available on: localhost:8081/swagger-ui.html#/
+
+You can also create a Jenkins job in your Jenkins server with the Jenkinsfile provided in the project root.
